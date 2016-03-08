@@ -1,0 +1,35 @@
+#the concept is for a possible python game but remember this is a secret
+print "FIGHT MECHANIC"
+print "BETA BY RYAAN"
+playerlevel = 0#this is to have a level up system so like add a level per battle
+power = 10
+health = 50
+energylevel = 10
+defence = 1
+print "Type a player name to start"
+a = raw_input()
+print "so your name is"
+print a
+print "WELCOME"
+print "Ok lets see you try and battle"
+import random
+enemy = random.randint(1,2)
+if enemy == 1:
+    enemyhealth = 20
+    attack = 5
+elif enemy == 2:
+    enemyhealth = 30
+    attack = 7
+while enemyhealth > 0 and health > 0:
+    print "Type 1 for attack"
+    print "Type 2 for defend"
+    print "type 3 for special"
+    c = input()
+    if c == 1:
+    #This is what I think is the issue
+        crit = random.randint(0,3)
+        attack = float(power) + float(crit)
+        enemyhealth = float(enemyhealth) - float(attack)
+if enemyhealth == 0:#this bit never appears when I run the code
+        print "GREAT"
+        print "concept by Ryaan"
